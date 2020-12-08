@@ -15,15 +15,12 @@ const Map = ({ eventData, center, zoom }) => {
 			return (
 				<LocationMarker
 					key={ev.id}
+					id={ev.id}
+					title={ev.title}
 					lat={ev.geometries[0].coordinates[1]}
 					lng={ev.geometries[0].coordinates[0]}
 					highlighted="false"
-					onClick={() => {
-						setLocationInfo({
-							id: ev.id,
-							title: ev.title
-						});
-					}}
+					setLocationInfo={setLocationInfo}
 				/>
 			);
 		}

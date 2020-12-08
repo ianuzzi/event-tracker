@@ -8,9 +8,7 @@ import Map from './components/Map';
 import LoadingSpinner from './components/LoadingSpinner';
 import Header from './components/Header';
 
-// TODO: Add react-loader-spinner
 // TODO: Add other types of events (refactor icons to lookup from array)
-// TODO: Change icon selected for more info to stand out
 
 const App = () => {
 	//
