@@ -1,0 +1,9 @@
+{
+	"nasa_api": {
+		"url": "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events",
+		"api_key": "### YOUR NASA API KEY ###"
+	},
+	"google_maps_api": {
+		"api_key": "### YOUR GOOGLE MAPS API KEY ###"
+	}
+}
