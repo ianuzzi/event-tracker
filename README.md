@@ -21,3 +21,5 @@
 - Added "click ouside" functionality using React useRef to make the highlighted event return to it's normal state and close the info box if the user clicks outside the selected event icon
 
 - Added additional event types (beyond wildfires) and did so using a JSON lookup table containing each event type info so that additional event types can be added to the app easily by adding another record to the object
+
+- Replaced the gif loading spinner with an npm package called react-loader-spinner to make the spinner configurable
