@@ -5,16 +5,17 @@ const locationInfoBox = ({ info, onClickClose }) => {
 				X
 			</button>
 			<h2>Event Location Info</h2>
+			<h3>TYPE: {info.type}</h3>
 			<ul>
 				<li>
 					ID: <strong>{info.id}</strong>
 				</li>
 				<li>
-					Iitle: <strong>{info.title}</strong>
+					Title: <strong>{info.title}</strong>
 				</li>
 			</ul>
 		</div>
-	);
-};
+	)
+}
 
-export default locationInfoBox;
+export default locationInfoBox

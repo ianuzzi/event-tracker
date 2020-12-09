@@ -1,36 +1,36 @@
-import { useState, useEffect, useRef } from 'react';
-import { Icon } from '@iconify/react';
-import locationIcon from '@iconify/icons-mdi/fire';
+import { useState, useEffect, useRef } from 'react'
+import { Icon } from '@iconify/react'
 
 const LocationMarker = (props) => {
 	//
-	const node = useRef();
+	const node = useRef()
 
-	const [highlighted, setHighlighted] = useState(props.highlighted);
+	const [highlighted, setHighlighted] = useState(props.highlighted)
 
 	const handleClick = (e) => {
 		if (node.current.contains(e.target)) {
-			console.log(node.current);
-			return;
+			console.log(node.current)
+			return
 		}
-		setHighlighted('false');
-	};
+		setHighlighted('false')
+	}
 
 	const clickToPopupInfo = () => {
-		setHighlighted('true');
+		setHighlighted('true')
 		props.setLocationInfo({
+			type: props.type,
 			id: props.id,
 			title: props.title
-		});
-	};
+		})
+	}
 
 	useEffect(() => {
-		document.addEventListener('click', handleClick);
+		document.addEventListener('click', handleClick)
 
 		return () => {
-			document.removeEventListener('click', handleClick);
-		};
-	}, []);
+			document.removeEventListener('click', handleClick)
+		}
+	}, [])
 
 	return (
 		<div
@@ -39,12 +39,12 @@ const LocationMarker = (props) => {
 			onClick={(e) => clickToPopupInfo()}
 		>
 			<Icon
-				icon={locationIcon}
+				icon={props.icon}
 				highlighted={highlighted}
 				className="location-icon"
 			/>
 		</div>
-	);
-};
+	)
+}
 
-export default LocationMarker;
+export default LocationMarker
